@@ -27,6 +27,7 @@
             targetArticle.classList.add('active');
     };
     const generateTitleLinks = (customSelector = '') => {
+        var _a;
         /* find and empty title list */
         const titleList = document.querySelector(selectorTitleList);
         titleList.innerHTML = '';
@@ -38,7 +39,7 @@
             /* find id of the article */
             const articleID = article.getAttribute('id');
             /* find elem that holds the title and retrieve it */
-            const articleTitle = article.querySelector(selectorTitle).innerHTML;
+            const articleTitle = (_a = article.querySelector(selectorTitle)) === null || _a === void 0 ? void 0 : _a.innerHTML;
             /* create HTML of the link */
             const linkHTML = '<li><a href="#' + articleID + '"><span>' + articleTitle + '</span></a></li>';
             /* insert link into html variable */
