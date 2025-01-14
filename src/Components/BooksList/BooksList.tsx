@@ -6,12 +6,13 @@ import './BooksList.css'
 
 type Props = {
   books: Book[];
+  removeBook: (id:string) => void
 }
 
-const BooksList: FC<Props> = ({ books }) => {
+const BooksList: FC<Props> = ({ books, removeBook }) => {
   return (
     <ul className="books-list">
-      {books.map((book: Book) => <BookItem key={book.id} book={book} />)}
+      {books.map((book: Book) => <BookItem key={book.id} book={book} removeBook={removeBook} />)}
     </ul>
   )
 }

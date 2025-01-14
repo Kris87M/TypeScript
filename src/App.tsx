@@ -11,16 +11,21 @@ const booksData: Book[] = [
 
 const App: FC = () => {
   const [books, setBooks] = useState<Book[]>(booksData);
+
   const addBook = (book: Book) => {
     setBooks([...books, book])
   }
+
+  const removeBook = (id: string) => {
+    setBooks(books.filter(book => book.id !== id));
+  };
 
   return (
     <div className="container">
       <header>
         <h1>Books App</h1>
       </header>
-      <BooksList books={books} />
+      <BooksList books={books} removeBook={removeBook} />
       <AddBookForm addBook={addBook} />
     </div>
   );
