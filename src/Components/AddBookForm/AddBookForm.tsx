@@ -28,9 +28,9 @@ const AddBookForm: FC<Props> = ({addBook}) => {
 
   return (
     <form className="add-book-form" onSubmit={handleSubmit}>
-      Title: <input value={title} onChange={e => setTitle(e.target.value)} type="text" />
-      Author: <input value={author} onChange={e => setAuthor(e.target.value)} type="text" />
-      Price: <input value={price} onChange={e => setPrice(parseInt(e.target.value))} type="number" />
+      Title: <input value={title} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTitle(e.target.value)} type="text" />
+      Author: <input value={author} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAuthor(e.target.value)} type="text" />
+      Price: <input value={price} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPrice(parseInt(e.target.value))} type="number" />
       <button>Add book</button>
     </form>
   );
