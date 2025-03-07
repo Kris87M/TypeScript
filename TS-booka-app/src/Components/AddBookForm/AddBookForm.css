@@ -1,0 +1,41 @@
+.add-book-form input {
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed rgba(105, 127, 238, 0.85);
+  padding: 10px;
+  background: none;
+  color: #fff;
+  max-width: 200px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.add-book-form input[type="number"] {
+  width: 60px;
+}
+
+.add-book-form button {
+  background-color: #ff4747;
+  background-image: linear-gradient(62deg, #ff4747 0%, #bc3e7f 100%);
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 1rem;
+  text-shadow: 0 0;
+  box-shadow: 0 20px 40px 0 rgba(76, 104, 239, .15);
+  transition: .2s;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.add-book-form button:hover {
+  position: relative;
+  top: -0.2rem;
+  left: -0.2rem;
+  box-shadow: 0 10px 40px 0 rgba(76, 104, 239, .25);
+}
